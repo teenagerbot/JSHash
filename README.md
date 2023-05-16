@@ -6,7 +6,7 @@ Using this library, you can encrypt any text and digital data both on the client
 To encrypt data on the client, we can include a file:
 ```html
 ...
-<script src="https://raw.githubusercontent.com/teenagerbot/JSHash/main/jshash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-hash-encoding@1.0.4/index.min.js"></script>
 <script>
   //create an instance of the encryption object
   const hashLib = new JSHash();
@@ -21,6 +21,8 @@ To encrypt data on the client, we can include a file:
     user: "bot"
   })) // 33447
   console.log(hashLib.encode([1, -344, "j", [4, "k"]])) // 16821
+  //get hash code of string, object, array, number:
+  console.log(hashLib.getHashCode([8])) // 89280
 </script>
 ```
 
@@ -34,6 +36,7 @@ typeof(hashLib.encode()) // Number
 ```js
 const hashLib = require("js-hash-encoding");
 console.log(hashLib.encode("hello world")) // 26496
+console.log(hashLib.getHashCode([8])) // 89280
 ```
 
 You can also import and generate a random user agent on the server (useful for parsing):
