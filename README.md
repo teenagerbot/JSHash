@@ -33,6 +33,10 @@ typeof(hashLib.encode()) // Number
 
 ## Data encryption on the server:
 
+```bash
+npm i js-hash-encoding
+```
+
 ```js
 const hashLib = require("js-hash-encoding");
 console.log(hashLib.encode("hello world")) // 26496
@@ -40,6 +44,10 @@ console.log(hashLib.getHashCode([8])) // 89280
 ```
 
 You can also import and generate a random user agent on the server (useful for parsing):
+```
+npm i @node_dev_php/useragent-js
+```
+
 ```js
 const userAgent = require("@node_dev_php/useragent-js");
 console.log(userAgent.getRandomUserAgent()) // "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:30.0) Gecko/20100101 Firefox/30.0"
